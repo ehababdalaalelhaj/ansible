@@ -1,0 +1,64 @@
+# ==========================================
+# Ansible Specific
+# ==========================================
+# Ansible execution logs, retry files, and local collections/roles
+*.retry
+*.log
+.ansible/
+roles/external/
+collections/ansible_collections/
+
+# Ansible Galaxy downloaded dependencies (if configured to download locally)
+/roles/galaxy/
+/collections/galaxy/
+
+# Ansible Vault password files (NEVER commit your plain-text master password)
+.ansible_vault_password
+.vault_pass
+*vault*password*
+
+# Ansible Lint and Molecule testing artifacts
+.ansible-lint
+.molecule/
+molecule/*/.molecule/
+
+# ==========================================
+# Secrets and Credentials (Critical Security)
+# ==========================================
+# Generic private keys and sensitive environment files
+*.pem
+*.key
+*.pub
+.env
+.env.*
+secrets.yml
+
+# ==========================================
+# Python and Virtual Environments
+# ==========================================
+# Ansible relies on Python; ignore compiled files and local virtualenvs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# OS and Editor Specific
+# ==========================================
+# Linux/macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thonmbs.db
+
+# IDEs and Text Editors
+.idea/
+.vscode/
+*.swp
+*~
