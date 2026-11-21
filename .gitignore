@@ -1,0 +1,21 @@
+# Ansible retry & vault password files
+*.retry
+*vault_pass*
+*vault-pass*
+.vault_password
+
+# Ignore everything inside labcollections EXCEPT requirements.yml
+labcollections/*
+!labcollections/requirements.yml
+
+# Ignore everything inside roles EXCEPT requirements.yml
+roles/*
+!roles/requirements.yml
+
+# Caches & editor temp files
+.ansible/
+fact_cache/
+*.cache
+*.swp
+*.swo
+*~
