@@ -22,12 +22,12 @@ users:
     group: developers
     comment: "Diana Prince - DevOps"
     shell: /bin/bash
- - name: Mona
+  - name: Mona
     uid: 2005
     group: operators
     comment: "Mona Any - Operator"
     shell: /bin/bash
- - name: randy
+  - name: randy
     uid: 2006
     group: operators
     comment: "Randy John- Operator"

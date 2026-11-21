@@ -1,0 +1,37 @@
+---
+  - name: Create Operators users and groups
+    vars_files:
+      - ./multiusers.yml
+      - ./locker.yml
+    hosts: prod
+    tasks:
+      - name: Create group Operators
+        ansible.builtin.group:
+          name: operators
+          state: present
+      - name: Create operators
+        ansible.builtin.user:
+          name: "{{ item.name }}"
+          groups: "{{ item.group }}"
+          uid: "{{ item.uid }}"
+          state: present
+        loop: "{{ users }}"
+        when: item.group == "operators"
+  - name: Create developers users and groups
+    vars_files:
+      - ./multiusers.yml
+      - ./locker.yml
+    hosts: dev
+    tasks:
+      - name: Create developers group
+        ansible.builtin.group:
+          name: developers
+          state: present
+      - name: Create developers users
+        ansible.builtin.user:
+          name: "{{ item.name }}"
+          uid: "{{ item.uid }}"
+          groups: "{{ item.group }}"
+          state: present
+        loop: "{{ users }}"
+        when: item.group == "developers"
