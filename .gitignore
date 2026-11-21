@@ -12,6 +12,9 @@ labcollections/*
 roles/*
 !roles/requirements.yml
 
+# Ignore archive directory
+archive/
+
 # Caches & editor temp files
 .ansible/
 fact_cache/
