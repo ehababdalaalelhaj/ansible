@@ -1,0 +1,9 @@
+[balancers]
+servera
+[web]
+serverb
+[dev]
+serverc
+[prod:children]
+balancers
+web

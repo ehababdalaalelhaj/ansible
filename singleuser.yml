@@ -1,0 +1,6 @@
+users:
+  - name: anna
+    uid: 2010
+    group: developer
+    comment: "Anna Bob - Developer"
+    shell: /bin/bash
